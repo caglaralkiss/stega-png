@@ -4,14 +4,16 @@ import {
 	sourceTextFileOpt,
 	sourceImageFileOpt,
 	targetImageFileOpt,
-	targetTextFileOpt
+	targetTextFileOpt,
 } from './options'
 
 import { hide, reveal } from './command'
 
 yargs(hideBin(process.argv))
 	.usage('Usage: $0 <command> [options]')
-	.command('hide', 'Hide message inside a given PNG file',
+	.command(
+		'hide',
+		'Hide message inside a given PNG file',
 		(paramYargs) => {
 			return paramYargs
 				.option(sourceTextFileOpt.param, sourceTextFileOpt.option)
@@ -20,7 +22,9 @@ yargs(hideBin(process.argv))
 		},
 		(argv) => hide(argv as any)
 	)
-	.command('reveal', 'Extract the hidden text from an PNG file',
+	.command(
+		'reveal',
+		'Extract the hidden text from an PNG file',
 		(paramYargs) => {
 			return paramYargs
 				.option(sourceImageFileOpt.param, sourceImageFileOpt.option)
@@ -31,6 +35,4 @@ yargs(hideBin(process.argv))
 	.demandCommand(1, 'Please specify one of the commands!')
 	.strict()
 	.help('h')
-	.alias('h', 'help')
-	.argv;
-
+	.alias('h', 'help').argv

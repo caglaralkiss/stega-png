@@ -6,16 +6,19 @@
  *
  * @returns stegoBufferWithOpacity
  */
-export function populateWithOpacityValues(originalBuffer: Buffer, stegoBuffer: Buffer): Buffer {
+export function populateWithOpacityValues(
+	originalBuffer: Buffer,
+	stegoBuffer: Buffer
+): Buffer {
 	const injectionArr = originalBuffer.slice()
 
 	let buffIndCounter = 0
 
 	for (let i = 0; i < injectionArr.length; i++) {
-		if ((i+1) % 4 === 0) {
+		if ((i + 1) % 4 === 0) {
 			buffIndCounter++
 		} else {
-			injectionArr[i] = stegoBuffer[i-buffIndCounter]
+			injectionArr[i] = stegoBuffer[i - buffIndCounter]
 		}
 	}
 

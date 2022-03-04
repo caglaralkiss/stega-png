@@ -1,51 +1,51 @@
 {
-  "name": "stega-png",
-  "version": "1.0.0",
-  "description": "A command line utility to hide your messages inside PNG files",
-  "main": "./bin/stega-png",
-  "bin": {
-    "stega-png": "./bin/stega-png"
-  },
-  "scripts": {
-    "build": "rimraf ./lib && tsc",
-    "test": "jest --config jestconfig.json",
-    "format": "prettier --ignore-path .gitignore --write \"**/*.+(js|ts|json)\"",
-    "lint": "eslint --ignore-path .gitignore --ext .js,.ts .",
-    "prepare": "npm run build",
-    "prepublishOnly": "npm test && npm run lint",
-    "preversion": "npm run lint",
-    "version": "npm run format && git add -A src",
-    "postversion": "git push && git push --tags"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/caglaralkiss/stega-png.git"
-  },
-  "keywords": [
-    "steganograpghy, png, cli"
-  ],
-  "author": "Caglar Alkis",
-  "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/caglaralkiss/stega-png/issues"
-  },
-  "homepage": "https://github.com/caglaralkiss/stega-png#readme",
-  "devDependencies": {
-    "@types/jest": "^27.4.1",
-    "@typescript-eslint/eslint-plugin": "^5.13.0",
-    "@typescript-eslint/parser": "^5.13.0",
-    "eslint": "^8.10.0",
-    "eslint-config-prettier": "^8.5.0",
-    "jest": "^27.5.1",
-    "prettier": "^2.5.1",
-    "rimraf": "^3.0.2",
-    "ts-jest": "^27.1.3",
-    "typescript": "^4.6.2"
-  },
-  "dependencies": {
-    "chalk": "^4.0.0",
-    "jimp": "^0.16.1",
-    "stega": "^1.1.1",
-    "yargs": "^17.3.1"
-  }
+    "name": "stega-png",
+    "version": "1.0.0",
+    "description": "A command line utility to hide your messages inside PNG files",
+    "main": "./bin/stega-png",
+    "bin": {
+        "stega-png": "./bin/stega-png"
+    },
+    "scripts": {
+        "build": "rimraf ./lib && tsc",
+        "test": "jest --config jestconfig.json",
+        "format": "prettier --ignore-path .gitignore --write \"**/*.+(js|ts|json)\"",
+        "lint": "eslint --ignore-path .gitignore --ext .js,.ts .",
+        "prepare": "npm run build",
+        "prepublishOnly": "npm test && npm run lint",
+        "preversion": "npm run lint",
+        "version": "npm run format && git add -A src",
+        "postversion": "git push && git push --tags"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/caglaralkiss/stega-png.git"
+    },
+    "keywords": [
+        "steganograpghy, png, cli"
+    ],
+    "author": "Caglar Alkis",
+    "license": "MIT",
+    "bugs": {
+        "url": "https://github.com/caglaralkiss/stega-png/issues"
+    },
+    "homepage": "https://github.com/caglaralkiss/stega-png#readme",
+    "devDependencies": {
+        "@types/jest": "^27.4.1",
+        "@typescript-eslint/eslint-plugin": "^5.13.0",
+        "@typescript-eslint/parser": "^5.13.0",
+        "eslint": "^8.10.0",
+        "eslint-config-prettier": "^8.5.0",
+        "jest": "^27.5.1",
+        "prettier": "^2.5.1",
+        "rimraf": "^3.0.2",
+        "ts-jest": "^27.1.3",
+        "typescript": "^4.6.2"
+    },
+    "dependencies": {
+        "chalk": "^4.0.0",
+        "jimp": "^0.16.1",
+        "stega": "^1.1.1",
+        "yargs": "^17.3.1"
+    }
 }
