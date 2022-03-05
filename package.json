@@ -1,6 +1,6 @@
 {
     "name": "stega-png",
-    "version": "1.0.0",
+    "version": "1.0.1",
     "description": "A command line utility to hide your messages inside PNG files",
     "main": "./bin/stega-png",
     "bin": {
